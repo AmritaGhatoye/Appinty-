@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: Outfit;
+}
+.active hr {
+    @apply block
+}
+@media (max-width:740px) {
+    .active  p{
+       @apply text-white bg-primary
+    }
+}
+::-webkit-scrollbar {
+    @apply hidden;
+}
+
+/* Light Animated Background */
+.animated-light-bg {
+    background: linear-gradient(-45deg, #f0f4ff, #e1eeff, #f9f9ff, #e6f0fa);
+    background-size: 400% 400%;
+    animation: lightGradient 15s ease infinite;
+}
+
+@keyframes lightGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background-color: transparent !important;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+/* Add a very subtle blur to cards if they have a white bg */
+.bg-white {
+    background-color: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(12px);
+}
